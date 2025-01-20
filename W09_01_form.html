@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>HTML FORM</h1>
+    <h3>Input Element</h3>
+    <p>An <spen style="color: brown;">input eiement</spen> can be displayed in many ways, depending on the <spen style="color: brown;">type</spen>  attribute</p>
+ 
+    <form action="" method="">
+  <fieldset style="background-color: rgb(245, 196, 111);" >
+    <legend>Text Field</legend>
+    <label for="fname">First Name</label>
+    
+    <input type="text" placeholder="กรุณาป้อนชื่อ" required id="fname" name="fname"><br> <br>
+     <label for="lname"> Last Name</label>
+   
+     <input type="text" placeholder="กรุณาป้อนนามสกุล"required id="lname" name="lname"><br> <br>
+    
+     <label for="email"> email</label>
+    <input type="email" placeholder="กรุณาป้อนอีเมล" id="email" name="email"> <br> <br>
+   
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age" min="0" max="10" > <br> <br>
+   
+    <label for="age">Age Readonly</label>
+    <input type="number" name="age" id="xx" value="0326548874" readonly>  <br> <br>
+   
+    <label for="hbd">brithday</label>
+    <input type="date"> <br> <br>
+
+        <label for="url">Website</label>
+        <input type="url"> <br> <br>
+
+    <input type="submit" value="ตกลง">
+    <input type="reset" value="ยกเลิก">
+  </fieldset>
+
+
+<fieldset>
+    <legend>Login</legend>
+   <form action="">
+    <input type="text" placeholder="email"><br> <br>
+    <input type="password" placeholder="passwoed"><br> <br>
+    <input type="submit" value="Sign in" >
+</form>
+</fieldset>
+
+<fieldset>
+<legend>Radio Button</legend>
+<form action="">
+<label >Gender:</label>
+<input type="radio" value="M" id="male" name="gender">
+<label for="male">ผู้ชาย</label>
+<input type="radio" value="f" id="female" name="gender">
+<label for="female">ผู้หญิง</label> <br> <br>
+
+<button type="=submit">OK</button>
+</form>
+</fieldset>
+
+<fieldset>
+<legend>Check box</legend>
+<form action="">
+    <p>เลือกภาษาที่ชอบ</p>
+    <input type="checkbox" value="HTML" id="HTML" name="language1">
+    <label for="HTML">HTML</label>
+   
+    <input type="checkbox" value="CSS" id="CSS" name="language2">
+    <label for="CSS">CSS</label>
+   
+    <input type="checkbox" value="JavaScript" id="JavaScript" name="language3">
+    <label for="JavaScript">JavaScript</label> <br> <br>
+
+    <button type="=submit">ยืนยัน</button>
+</form>
+</fieldset>
+
+
+<fieldset>
+    <legend>Select...Option (Dropdown list)</legend>
+    <form action="">
+<label for="province">Province</label>
+<select name="province" id="province" >
+<option value="bangkok">กรุงเทพ</option>
+<option value="Nakhon Pathom">นครปฐม</option>
+<option value="Sonkla">สงขลา</option>
+</select><br> <br>
+<button type="=submit">ยืนยัน</button>
+    </form>
+</fieldset>
+
+<fieldset>
+    <legend>Text Area</legend>
+    <form action="">
+        <label for="address">Address</label> <br>
+        <textarea name="address" id="address" cols="50" rows="5"></textarea> <br>
+        <input type="submit">
+    </form>
+</fieldset>
+<fieldset>
+    <legend>Upload File</legend>
+    <form action="">
+        <label for="">ไฟล์เเนบ</label> <br>
+        <input type="file" name="attach" > <br> <br>
+       
+        <label for="">เลือกสี</label> 
+        <input type="color">
+       
+        <button type="button" onclick="alert('Hello World')">
+            Click Me</button>
+    </form>
+</fieldset>
+
+    </form>
+</body>
+</html>
