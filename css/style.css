@@ -1,12 +1,41 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(174, 174, 241);
+}
 header{
-    height: 100px;
+    margin: 0 40px;
 }
 .containes{
-    background-color: aquamarine;
+    width: 70%;
+   margin: auto;
 }
+.card{
+    background-color: rgb(228, 245, 245);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
 footer{
-    background-color: rgb(28, 28, 172);
+    background-color: rgb(127, 127, 179);
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 0;
+    margin-top: 15px;
+   
+    p{
+        color: bisque;
+    }
 }
 nav{
   
@@ -41,12 +70,33 @@ nav{
     color: antiquewhite;
     padding: 10px 20px;
     border-radius: 5px;
-text-decoration: none;
+    text-decoration: none;
+    border: none;
+}
+.btn-primry:hover{
+    background-color: rgb(62, 62, 169);
 }
 .btn-secondary{
     background-color: antiquewhite;
     color:  blue;
     padding: 10px 20px;
     border-radius: 5px;
-text-decoration: none;
+   text-decoration: none;
+   border: none;
 }
+.btn-secondary:hover{
+    background-color: rgb(246, 221, 188);
+    
+}
+.menu ul li a {
+    text-decoration: none;
+    color: beige;
+    font-size: 1rem;
+}
+.menu ul li a:hover{
+    text-decoration: none;
+    color:  blue;
+    font-size: 1rem;
+}
+
+
