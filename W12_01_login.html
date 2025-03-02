@@ -52,6 +52,7 @@
         .right-side{
             width: 40%;
             padding: 40px;
+        }
 
             form{
                 label{
@@ -76,6 +77,43 @@
                     margin-top: 8px;
                 }
             }
+                @media screen and (max-width: 768px) {
+        body{
+        flex-direction: column-reverse;
+        
+        .container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    
+        
+        }
+        
+        .left-side{
+            flex-direction: column;
+
+            width: 100%;
+            height: 50%;
+
+            
+            p{
+            font-size: 18px;
+            font-weight: 500;
+            
+            }
+        }
+
+        .right-side{
+            flex-direction: column;
+        
+            width: 80%;
+            height: 50%;
+            text-align: left;
+            margin-top: -10px;
+        
+        }
+
+            }
         }
 
     </style>
@@ -88,7 +126,7 @@
         </div>
         <div class="right-side">
             <h2>Login</h2>
-            <form action="" mathod="">
+            <form action="" id="loginForm"   mathod="">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" required>
                 <label for="password">Password</label>
@@ -100,7 +138,32 @@
         </div>
         
     </div>
-    
+    <script>
+        // เพิ่ม event listener ให้กับฟอร์มที่มี id เป็น "loginForm"
+        // เมื่อผู้ใช้กด submit จะเรียกใช้ฟังก์ชันที่กำหนด
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // ป้องกันการโหลดหน้าใหม่เมื่อกดปุ่ม submit
+   
+            // ดึงค่าที่ผู้ใช้ป้อนจาก input field (username และ password) และตัดช่องว่างด้านหน้า/หลังออก
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let errorMsg = document.getElementById("errorMsg"); // อ้างอิงถึง div ที่ใช้แสดงข้อความ error
+   
+            // ตรวจสอบว่าผู้ใช้กรอกข้อมูลครบหรือไม่
+            if (username === "" || password === "") {
+                errorMsg.textContent = "กรุณากรอก Username และ Password"; // แสดงข้อความแจ้งเตือน
+                return; // ออกจากฟังก์ชันทันที ไม่ดำเนินการตรวจสอบต่อ
+            }
+   
+            // ตรวจสอบว่าข้อมูลที่ป้อนตรงกับค่าที่กำหนดไว้หรือไม่ (username: "admin", password: "1234")
+            if (username === "admin" && password === "1111") {
+                //alert("เข้าสู่ระบบสำเร็จ!"); // แจ้งเตือนผู้ใช้ว่าล็อกอินสำเร็จ
+                window.location.href = "11_webFromFigma.html"; // เปลี่ยนหน้าไปยังเป้าหมาย"
+            } else {
+                errorMsg.textContent = "Username หรือ Password ไม่ถูกต้อง"; // แสดงข้อความ error เมื่อป้อนข้อมูลผิด
+            }
+        });
+    </script>
 
 </body>
 </html>

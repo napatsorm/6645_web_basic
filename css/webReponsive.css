@@ -256,15 +256,84 @@ margin-top: 50px;
 display: grid;
 grid-template-columns: repeat(4,1fr);
 }
+
+footer{
+    background-color: var(--primary-colcr);
+    padding: 40px 20px;
+    color: var(--base-white-color);
+}
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+
+        max-width: 1200px;
+        margin: auto;
+    }
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    .f-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
+h3{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+}
+.footer-right{
+
+}
+.footer-item{
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+ul{
+    list-style: none;
+    li{
+        margin-bottom: 10px;
+
+        a{
+            text-decoration: none;
+            color: var(--base-white-color);
+        }
+        a:hover{
+            color: var(--secondary-color);
+        }
+    }
+}
+}
+
 /*Responsive for Mobile*/
 @media screen and (max-width:768px){
 
     header{
         flex-direction: column;
+        padding: 10px 10px;
     }
 
     nav{
         display: none;
+    }
+
+    .header-button{
+        display: none;
+    }
+
+    .hamburger-icon{
+        display: block;
+        font-size: 1.5rem;
     }
 
     .hero{
@@ -294,26 +363,58 @@ grid-template-columns: repeat(4,1fr);
     .discover-content{
         grid-template-columns: repeat(1,1fr);
     }
-footer{
-    background-color: var(--primary-colcr);
-    padding: 40px 20px;
-    color: var(--base-white-color);
-}
+
     .footer-container{
-        display: flex;
-        justify-content: space-between;
-
-        max-width: 1200px;
-        margin: auto;
+        flex-direction: column;
     }
-}
-.footer-left{
 
+    .footer-item{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+.full-screen-menu{
+    display: none;
 }
-.footer-right{
-
+/* เมนูเต็มจอ */
+.full-screen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* พื้นหลังสีดำโปร่งแสง */
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    z-index: 999;
 }
-.footer-item{
 
+.full-screen-menu ul {
+    list-style: none;
+    padding-top: 50px;
 }
 
+.full-screen-menu ul li {
+    margin: 20px 0;
+}
+
+.full-screen-menu ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.full-screen-menu ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* ปุ่มปิดเมนู */
+.close-btn {
+    font-size: 32px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+}
